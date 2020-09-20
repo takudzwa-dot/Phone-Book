@@ -11,3 +11,6 @@ In this directory run the following to setup a database on your machine (provide
 The connection strings can be found in the appsettings.json.
 
 
+### Frontend
+
+Angular application is under Client folder.
