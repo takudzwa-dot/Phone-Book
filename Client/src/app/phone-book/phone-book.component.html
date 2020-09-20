@@ -1,0 +1,11 @@
+<div class="basic-container" >
+	<mat-nav-list>
+		<mat-list-item *ngFor="let i of phoneBooks">
+			  <ngx-avatar matListAvatar  class="my-avatar" value="{{getInitials(i.name)}}"> </ngx-avatar>
+			  <h1 matLine><b>{{i.name}} </b> </h1>
+			  <button mat-icon-button (click)="navigateTo(i)">
+				<mat-icon>info</mat-icon>
+			</button>
+		</mat-list-item>
+	</mat-nav-list>
+</div>

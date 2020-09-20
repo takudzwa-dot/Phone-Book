@@ -1,0 +1,12 @@
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\bin\Debug\netcoreapp3.1\PhoneBook.Data.deps.json
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\bin\Debug\netcoreapp3.1\PhoneBook.Data.dll
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\bin\Debug\netcoreapp3.1\PhoneBook.Data.pdb
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.AssemblyInfoInputs.cache
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.AssemblyInfo.cs
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.dll
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.pdb
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\bin\Debug\netcoreapp3.1\PhoneBook.Data.runtimeconfig.json
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\bin\Debug\netcoreapp3.1\PhoneBook.Data.runtimeconfig.dev.json
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.genruntimeconfig.cache
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.csprojAssemblyReference.cache
+C:\Users\takudzwa.mabenge\Documents\Source\PhoneBook\PhoneBook.Data\obj\Debug\netcoreapp3.1\PhoneBook.Data.csproj.CoreCompileInputs.cache
