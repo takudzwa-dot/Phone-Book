@@ -26,6 +26,7 @@ export class PhoneBookService {
 
    savePhoneBook(phonebookdto: PhoneBookDto): Observable<any>
    {
+     console.log(phonebookdto);
      return this.http.post<EntryDto>(this.url,
       phonebookdto
       )

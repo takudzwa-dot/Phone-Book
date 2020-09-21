@@ -1,10 +1,3 @@
-#fab-dismiss {
-  position: fixed;
-  right: 1%;
-  bottom: 1%;
-  z-index: 99;
-}
-
 .bottom-form {
   min-width: 150px;
   max-width: 500px;

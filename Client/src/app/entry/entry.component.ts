@@ -13,16 +13,11 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class EntryComponent implements OnInit {
 
-  public  newName: string;
-  public  newPhoneNumber: string;
-
   public hide: boolean;
   public entries: EntryDto[];
 
-
-  public displayedColumns: string[] = ['name', 'phoneNumber'];
+  public displayedColumns: string[] = ['name', 'phoneNumber', 'action'];
   public datasource: MatTableDataSource<EntryDto>;
-
 
   constructor(
     public dialogRef: MatDialogRef<EntryComponent>,
@@ -58,6 +53,17 @@ export class EntryComponent implements OnInit {
     );
 
     this.hideTable();
+  }
+
+  public removeEntry(id: string): void{
+    
+    this.entryService.deleteEntry(id)
+    .subscribe(
+      result => {
+        this.entries.splice(this.entries.findIndex(x => x.id === id), 1);
+        this.datasource.data = this.entries;
+      }
+    )
   }
 
   public hideTable(): void

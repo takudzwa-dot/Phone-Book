@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { PhoneBookService } from '../services/phone-book.service';
 import { PhoneBookDto } from '../models/phonebookdto';
-import {Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { EntryComponent } from '../entry/entry.component';
+import {MatBottomSheet  } from '@angular/material/bottom-sheet';
+import { BottomInputSheetComponent } from '../bottom-input-sheet/bottom-input-sheet.component';
+import { isNullOrUndefined } from 'util';
 
 
 
@@ -16,7 +18,7 @@ export class PhoneBookComponent implements OnInit {
 
   public phoneBooks: PhoneBookDto[];
 
-  constructor(public dialog: MatDialog, private phonebookService: PhoneBookService, private route: Router) {
+  constructor(private bottomSheet: MatBottomSheet, public dialog: MatDialog, private phonebookService: PhoneBookService) {
   }
 
   ngOnInit(): void {
@@ -33,7 +35,12 @@ export class PhoneBookComponent implements OnInit {
     );
   }
 
-  navigateTo(phonebookdto: PhoneBookDto): void
+  openBottomSheet(): void {
+    this.bottomSheet.open(BottomInputSheetComponent);
+    this.subscribe();
+  }
+
+  openDialog(phonebookdto: PhoneBookDto): void
   {
     const dialogRef = this.dialog.open(EntryComponent, {
       data: { phonebookid: phonebookdto.id },
@@ -41,9 +48,35 @@ export class PhoneBookComponent implements OnInit {
     dialogRef.updateSize('100%', '70%');
   }
 
+  public removePhoneBook(phonebookid: string): void
+  {
+    this.phonebookService.deletePhoneBook(phonebookid)
+    .subscribe(
+      () => {
+       this.phoneBooks.splice(this.phoneBooks.findIndex(x => x.id === phonebookid), 1);
+      }
+    );
+  }
+
+  public subscribe(): void
+  {
+    this.bottomSheet._openedBottomSheetRef.afterDismissed()
+    .subscribe(
+        result => {
+          // tslint:disable-next-line: deprecation
+          if (!isNullOrUndefined(result)) {
+          this.phoneBooks.push(result);
+          }
+        }
+    );
+  }
+
+
   getInitials(value: string): string
   {
    return value.substring(0, 2);
   }
 
 }
+
+

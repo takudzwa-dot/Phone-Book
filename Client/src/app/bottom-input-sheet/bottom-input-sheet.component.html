@@ -1,0 +1,10 @@
+<form class="bottom-form">
+  <mat-form-field class="bottom-full-width">
+    <mat-label>Phone Book Name</mat-label>
+    <input matInput #message maxlength="150" placeholder="Family">
+    <mat-hint align="end">{{message.value.length}} / 150</mat-hint>
+  </mat-form-field>
+</form>
+
+<button mat-raised-button style="margin-right: 10px;" (click)="savePhoneBook(message.value)" color="primary">Save</button>
+<button mat-raised-button style="margin-left: 10px;" (click)="closeSheet()" color="primary">Close</button>

@@ -12,6 +12,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule} from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS } from '@angular/material/bottom-sheet';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         MatSlideToggleModule,
         MatCardModule,
         MatTableModule,
-        MatToolbarModule
-    ]
+        MatToolbarModule,
+        MatBottomSheetModule
+    ],
+    providers: [{provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}]
   })
   export class MaterialModule { }

@@ -63,7 +63,7 @@ export class EntryService {
     deleteEntry(id: string): Observable<any>{
      return this.http.delete<any>(
        this.url +
-       '?id' + id
+       '?id=' + id
       );
    }
 

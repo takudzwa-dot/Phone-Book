@@ -3,9 +3,15 @@
 		<mat-list-item *ngFor="let i of phoneBooks">
 			  <ngx-avatar matListAvatar  class="my-avatar" value="{{getInitials(i.name)}}"> </ngx-avatar>
 			  <h1 matLine><b>{{i.name}} </b> </h1>
-			  <button mat-icon-button (click)="navigateTo(i)">
+			  <button mat-icon-button (click)="openDialog(i)">
 				<mat-icon>info</mat-icon>
+			</button>
+			<button mat-icon-button (click)="removePhoneBook(i.id)">
+				<mat-icon>delete</mat-icon>
 			</button>
 		</mat-list-item>
 	</mat-nav-list>
 </div>
+ <button id="fab-dismiss" mat-fab color="accent" (click)="openBottomSheet()">
+          <mat-icon>add</mat-icon>
+</button>
